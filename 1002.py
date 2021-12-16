@@ -1,14 +1,19 @@
+import math
+
 # 터렛
 T = int(input())        # 테스트 케이스의 개수
 
-for i in range(0, T):
-    str = input()
-    arr = str.split(' ')
+for i in range(T):
+    x1, y1, r1, x2, y2, r2 = map(int, input().split())
+    distance = math.sqrt((x1 - x2)**2 + (y1 - y2)**2)      # 두 원의 거리 (원의방정식활용)
+    if distance == 0 and r1 == r2:                         # 두 원이 동심원이고 반지름이 같을 때
+        print(-1)
+    elif abs(r1 - r2) == distance or r1 + r2 == distance:  # 내접, 외접일 때
+        print(1)
+    elif abs(r1 - r2) < distance < (r1 + r2):              # 두 원이 서로다른 두 점에서 만날 때
+        print(2)
+    else:
+        print(0)                                           # 그 외에(접점 없음)
 
-    point1 = arr[0], arr[1]
-    r1 = arr[2]
-
-    point2 = arr[3], arr[4]
-    r2 = arr[5]
-
-# 풀이 : https://eine.tistory.com/entry/%EB%B0%B1%EC%A4%80%EC%A0%80%EC%A7%80-1002%EB%B2%88-%ED%84%B0%EB%A0%9B-%EB%AC%B8%EC%A0%9C-%ED%92%80%EC%9D%B4
+# 풀이 : https://travelerfootprint.tistory.com/61
+# 풀이(파이썬) : https://ooyoung.tistory.com/111
