@@ -1,18 +1,15 @@
 # 피보나치 함수
-
-def fibonacci(n):
-    if n == 0:
-        fibonacci.cnt_0 += 1
-        return 0
-    elif n == 1:
-        fibonacci.cnt_1 += 1
-        return 1
-    else:
-        return fibonacci(n - 1) + fibonacci(n - 2)
-
 T = int(input())        # 테스트 케이스 개수
 
-for i in range(T):
+for tc in range(T):
     num = int(input())
-    fibonacci(num)
-    # print('%d %d' % (cnt_0, cnt_1))
+    cnt_0 = [1, 0]  # 0의 호출 횟수를 기록하는 리스트
+    cnt_1 = [0, 1]  # 1의 호출 횟수를 기록하는 리스트
+
+    for i in range(2, num+1):
+        cnt_0.append(cnt_0[i - 1] + cnt_0[i - 2])
+        cnt_1.append(cnt_1[i - 1] + cnt_1[i - 2])
+
+    print('{} {}'.format(cnt_0[num], cnt_1[num]))
+
+# 참고 : https://jennnn.tistory.com/11
