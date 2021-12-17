@@ -1,6 +1,6 @@
+# 터렛
 import math
 
-# 터렛
 T = int(input())        # 테스트 케이스의 개수
 
 for i in range(T):
@@ -15,5 +15,5 @@ for i in range(T):
     else:
         print(0)                                           # 그 외에(접점 없음)
 
-# 풀이 : https://travelerfootprint.tistory.com/61
+# 풀이 : https://travelerfootprint.tistory.com/
 # 풀이(파이썬) : https://ooyoung.tistory.com/111
