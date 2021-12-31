@@ -14,3 +14,5 @@ else:                   # 사선 라인이 홀수일 때
     top = gap + 1       #   분자
     under = line - gap  #   분모
 print("%d/%d" %(top, under))
+
+# 참고 : https://ooyoung.tistory.com/84
