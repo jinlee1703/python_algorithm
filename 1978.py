@@ -8,8 +8,8 @@ for x in number_list:
     check = 0
     if x != 1:
         for i in range(2, x):
-            if x % i == 0:
+            if x % i == 0:      # 2 ~ 자기자신-1까지 나누어 지는지 체크
                 check = 1
-        if check == 0:
+        if check == 0:          # 나누어 지지 않았다면 소수임.
             cnt += 1
 print(cnt)
