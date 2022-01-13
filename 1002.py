@@ -5,7 +5,7 @@ T = int(input())        # 테스트 케이스의 개수
 
 for i in range(T):
     x1, y1, r1, x2, y2, r2 = map(int, input().split())
-    distance = math.sqrt((x1 - x2)**2 + (y1 - y2)**2)      # 두 원의 거리 (원의방정식활용)
+    distance = math.sqrt((x1 - x2)**2 + (y1 - y2)**2)      # 두 원의 거리 (원의방정식활용), math.sqrt : 제곱근 구하는 함수
     if distance == 0 and r1 == r2:                         # 두 원이 동심원이고 반지름이 같을 때
         print(-1)
     elif abs(r1 - r2) == distance or r1 + r2 == distance:  # 내접, 외접일 때
