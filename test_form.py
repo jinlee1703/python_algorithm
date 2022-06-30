@@ -1,6 +1,6 @@
 def solution():
-    None
+    return
 
 
 if __name__ == "__main__":
-    solution()
+    print(solution())
