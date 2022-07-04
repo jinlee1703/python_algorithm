@@ -1,5 +1,7 @@
 def solution():
-    return
+    answer = []
+    
+    return answer
 
 
 if __name__ == "__main__":
