@@ -1,5 +1,6 @@
 # 치킨 두 마리 (...)
 a, b = map(int, input().split())
-price = int(input()) * 2
-result = a + b - price
-print(result if result > 0 else result + price)
+price = int(input())
+ownMoney = a + b
+chickenTwoPrice = price * 2
+print(ownMoney - chickenTwoPrice if ownMoney >= chickenTwoPrice else ownMoney)
