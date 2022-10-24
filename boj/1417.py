@@ -17,4 +17,8 @@ while m != vote[0] or vote.count(m) >= 2:
     answer += 1
     m = max(vote)
 
+<<<<<<< HEAD
 print(answer)
+=======
+print(answer)
+>>>>>>> d0cb64bf16f8117280c393edd297895924af1029
